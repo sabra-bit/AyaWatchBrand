@@ -62,7 +62,7 @@ if menu_selection == "Knowledge Base 💾":
         Questions = [
             (Question,Answer,Right,Conclusion,0,Topic),
         ]
-        cursor.executemany("""INSERT INTO Questions (Question,Reply,Rightreply,Inference,isSelected,,Topic) 
+        cursor.executemany("""INSERT INTO Questions (Question,Reply,Rightreply,Inference,isSelected,Topic) 
                            VALUES  (?, ?, ?, ?, ?,?)""", Questions)
 
         conn.commit()
